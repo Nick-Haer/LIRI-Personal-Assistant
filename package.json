@@ -1,0 +1,19 @@
+{
+  "name": "liri-personal-assistant",
+  "version": "1.0.0",
+  "description": "\"Liri personal assistant\"",
+  "main": "liri.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nick-Haer/LIRI-Personal-Assistant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nick-Haer/LIRI-Personal-Assistant/issues"
+  },
+  "homepage": "https://github.com/Nick-Haer/LIRI-Personal-Assistant#readme"
+}
