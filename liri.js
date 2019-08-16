@@ -21,12 +21,12 @@ let command = process.argv[2]
 
 let param = process.argv.slice(3).join(` `)
 
-fs.appendFile(`log.txt`, `${command}: ${param}\n`, (error) => {
-    if (error) {
-        console.log(error)
-    }
+// fs.appendFile(`log.txt`, `${command}: ${param}\n`, (error) => {
+//     if (error) {
+//         console.log(error)
+//     }
 
-})
+// })
 
 
 function activateLiri () {
@@ -37,13 +37,21 @@ function activateLiri () {
     switch (command) {
         case `concert-this`:
             let queryurl = `https://rest.bandsintown.com/artists/${param}/events?app_id=codingbootcamp`
+            console.log(param)
             axios.get(queryurl).then((response) => {
+
+                if (!response.data[0]) {
+                    console.log("Sorry, no upcoming concerts!")
+                } else {
+                // console.log(response.data[0])
                 console.log(`Venue Name: ` + response.data[0].venue.name)
                 console.log(`Venue Location: ` + response.data[0].venue.city, response.data[0].venue.region)
-                console.log(moment(`Date: ` + response.data[0].datetime).format("MM/DD/YYYY"))
+                let aDate = moment(response.data[0].datetime).format("MM/DD/YYYY")
+                console.log(`Date: ${aDate}`)
+                }
+
             }).catch((err) => {
                 console.log(err)
-                console.log(`boogaloo`)
             })
     
             break;
