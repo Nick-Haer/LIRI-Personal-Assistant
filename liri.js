@@ -21,18 +21,18 @@ let command = process.argv[2]
 
 let param = process.argv.slice(3).join(` `)
 
-// fs.appendFile(`log.txt`, `${command}: ${param}\n`, (error) => {
-//     if (error) {
-//         console.log(error)
-//     }
+fs.appendFile(`log.txt`, `${command}: ${param}\n`, (error) => {
+    if (error) {
+        console.log(error)
+    }
 
-// })
+})
 
 
 function activateLiri () {
 
-    console.log(command)
-    console.log(param)
+    // console.log(command)
+    // console.log(param)
 
     switch (command) {
         case `concert-this`:
@@ -99,13 +99,13 @@ function activateLiri () {
             if (error) {
                 console.log(error)
             } else {
-                console.log(data)
+                // console.log(data)
                 dataArray = data.split(`,`)
                 command = dataArray[0]
-                console.log(command)
+                // console.log(command)
                 param = dataArray[1].slice(1, param.length-1)
                 //to remove the quotes included in the instructions, so the param would be similar to a value entered through the command line
-                console.log(param)
+                // console.log(param)
                 activateLiri()
             }
 
