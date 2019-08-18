@@ -47,3 +47,5 @@ spotify-this-song: for whom the bell tolls
 spotify-this-song: for whom the bell tolls
 spotify-this-song: for whom the bell tolls
 spotify-this-song: for whom the bell tolls
+do-what-it-says: 
+spotify-this-song: wreck of the edmund fitzgerald
