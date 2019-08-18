@@ -58,7 +58,7 @@ function activateLiri () {
         case `spotify-this-song`:
             let song = param;
                 if (!param) {
-                    song = `The Sign`
+                    song = `Ace of Base The Sign`
                 } else {
                     song = param
                 }
